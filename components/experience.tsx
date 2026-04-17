@@ -107,7 +107,7 @@ export function Experience() {
           <div className="glass p-6 hover:bg-white/10 transition-all duration-300">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between">
               <div>
-                <h4 className="text-lg font-bold text-white">B.Sc. Computer Science (AI/ML)</h4>
+                <h4 className="text-lg font-bold text-white">B.Tech. CSE – Specialization in AI &amp; ML</h4>
                 <p className="text-blue-400 font-semibold">Karunya Institute of Technology and Science</p>
                 <p className="text-white/40 text-sm mt-1">Coimbatore, Tamil Nadu, India</p>
               </div>
