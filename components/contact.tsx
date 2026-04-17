@@ -30,7 +30,6 @@ export function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Here you would typically send the form data to your backend
     console.log('Form submitted:', formState)
     setSubmitted(true)
     setTimeout(() => {
@@ -40,10 +39,36 @@ export function Contact() {
   }
 
   const contactLinks = [
-    { label: 'Email', value: 'yogesh@example.com', href: 'mailto:yogesh@example.com' },
-    { label: 'GitHub', value: 'github.com/yogesh', href: 'https://github.com' },
-    { label: 'LinkedIn', value: 'linkedin.com/in/yogesh', href: 'https://linkedin.com' },
-    { label: 'Twitter', value: '@yogesh_ai', href: 'https://twitter.com' },
+    {
+      label: 'Email',
+      value: 'yogeshyogi7504@gmail.com',
+      href: 'mailto:yogeshyogi7504@gmail.com',
+      icon: '✉️',
+    },
+    {
+      label: 'Phone',
+      value: '+91 7904795700',
+      href: 'tel:+917904795700',
+      icon: '📞',
+    },
+    {
+      label: 'GitHub',
+      value: 'github.com/Yogesh07050',
+      href: 'https://github.com/Yogesh07050',
+      icon: '🐙',
+    },
+    {
+      label: 'LinkedIn',
+      value: 'linkedin.com/in/yogesh-m',
+      href: 'https://linkedin.com/in/yogesh-m',
+      icon: '💼',
+    },
+    {
+      label: 'Location',
+      value: 'Madurai, Tamil Nadu, India',
+      href: 'https://maps.google.com/?q=Madurai,India',
+      icon: '📍',
+    },
   ]
 
   return (
@@ -60,7 +85,7 @@ export function Contact() {
             Let&apos;s Connect
           </h2>
           <p className="text-white/60 text-lg">
-            I&apos;m always interested in hearing about new projects and opportunities
+            I&apos;m open to new opportunities, collaborations, and conversations
           </p>
         </motion.div>
 
@@ -146,23 +171,26 @@ export function Contact() {
             initial={{ opacity: 0, x: 20 }}
             animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
             transition={{ duration: 0.6 }}
-            className="space-y-4 flex flex-col justify-center"
+            className="space-y-3 flex flex-col justify-center"
           >
             {contactLinks.map((link, index) => (
               <motion.a
                 key={link.label}
                 href={link.href}
-                target="_blank"
+                target={link.label !== 'Phone' ? '_blank' : undefined}
                 rel="noopener noreferrer"
                 initial={{ opacity: 0, x: 20 }}
                 animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.08 }}
                 className="glass p-4 hover:bg-white/10 transition-all duration-300 group"
               >
                 <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-white/60 text-sm font-medium">{link.label}</p>
-                    <p className="text-white font-semibold mt-1">{link.value}</p>
+                  <div className="flex items-center gap-3">
+                    <span className="text-xl">{link.icon}</span>
+                    <div>
+                      <p className="text-white/50 text-xs font-medium uppercase tracking-wide">{link.label}</p>
+                      <p className="text-white font-semibold mt-0.5">{link.value}</p>
+                    </div>
                   </div>
                   <span className="text-blue-400 group-hover:translate-x-2 transition-transform duration-300">
                     →

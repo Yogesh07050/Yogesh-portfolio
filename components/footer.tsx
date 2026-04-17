@@ -6,9 +6,9 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   const socialLinks = [
-    { icon: '→', label: 'GitHub', href: 'https://github.com' },
-    { icon: '→', label: 'LinkedIn', href: 'https://linkedin.com' },
-    { icon: '→', label: 'Twitter', href: 'https://twitter.com' },
+    { label: 'GH', title: 'GitHub', href: 'https://github.com/Yogesh07050' },
+    { label: 'LI', title: 'LinkedIn', href: 'https://linkedin.com/in/yogesh-m' },
+    { label: 'GM', title: 'Email', href: 'mailto:yogeshyogi7504@gmail.com' },
   ]
 
   return (
@@ -24,8 +24,9 @@ export function Footer() {
           >
             <h3 className="text-xl font-bold text-white mb-3">Yogesh M</h3>
             <p className="text-white/60 text-sm">
-              AI/ML Engineer focused on building intelligent systems and solving complex problems with machine learning.
+              AI/ML Developer focused on building intelligent systems — RAG pipelines, NL-to-SQL chatbots, and MLOps automation.
             </p>
+            <p className="text-white/40 text-sm mt-2">📍 Madurai, Tamil Nadu, India</p>
           </motion.div>
 
           {/* Quick Links */}
@@ -57,7 +58,7 @@ export function Footer() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-lg font-semibold text-white mb-3">Social</h3>
+            <h3 className="text-lg font-semibold text-white mb-3">Connect</h3>
             <div className="flex gap-3">
               {socialLinks.map((social) => (
                 <motion.a
@@ -65,15 +66,21 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 glass rounded-lg flex items-center justify-center text-white/60 hover:text-blue-400 hover:border-blue-400/50 transition-all duration-300"
+                  className="w-10 h-10 glass rounded-lg flex items-center justify-center text-white/60 hover:text-blue-400 hover:border-blue-400/50 transition-all duration-300 text-xs font-bold"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
-                  title={social.label}
+                  title={social.title}
                 >
-                  {social.icon}
+                  {social.label}
                 </motion.a>
               ))}
             </div>
+            <p className="text-white/40 text-sm mt-4">
+              ✉️ yogeshyogi7504@gmail.com
+            </p>
+            <p className="text-white/40 text-sm mt-1">
+              📞 +91 7904795700
+            </p>
           </motion.div>
         </div>
 
@@ -84,7 +91,7 @@ export function Footer() {
               © {currentYear} Yogesh M. All rights reserved.
             </p>
             <p className="text-white/60 text-sm mt-4 md:mt-0">
-              Built with React, Next.js, and Tailwind CSS
+              Built with Next.js, Framer Motion & Tailwind CSS
             </p>
           </div>
         </div>

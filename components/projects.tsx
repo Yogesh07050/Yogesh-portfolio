@@ -6,40 +6,24 @@ import { ProjectCard } from './project-card'
 
 const projects = [
   {
-    title: 'Advanced ML Pipeline',
-    description: 'End-to-end machine learning pipeline with automated feature engineering, model training, and deployment on cloud infrastructure.',
-    tags: ['Python', 'TensorFlow', 'MLOps', 'Docker', 'Kubernetes'],
-    github: 'https://github.com',
+    title: 'Moodys – AI Workflow System',
+    description: 'AI-powered system using RAG and LangGraph to handle context-aware queries through multi-step workflows. Implemented MCP-based orchestration for structured task execution and efficient data retrieval.',
+    tags: ['RAG', 'LangGraph', 'MCP', 'FastAPI', 'Python'],
   },
   {
-    title: 'Deep Learning Model',
-    description: 'Custom CNN architecture for image classification achieving 97% accuracy on benchmark datasets with optimized inference.',
-    tags: ['PyTorch', 'Computer Vision', 'CUDA', 'Optimization'],
-    github: 'https://github.com',
+    title: 'Donor Portal Chatbot',
+    description: 'Chatbot that converts natural language queries into SQL to retrieve data from structured databases. Designed query pipelines to process user input and return accurate responses.',
+    tags: ['NL-to-SQL', 'LangChain', 'FastAPI', 'Python', 'SQL'],
   },
   {
-    title: 'NLP Text Analysis',
-    description: 'Transformer-based NLP system for sentiment analysis and text classification with multi-language support.',
-    tags: ['Hugging Face', 'BERT', 'NLP', 'FastAPI'],
-    github: 'https://github.com',
+    title: 'AI-Generated Image Detection',
+    description: 'Classification model to detect AI-generated versus real images. Performed end-to-end ML workflow: data cleaning, preprocessing, feature engineering, model training and evaluation.',
+    tags: ['Computer Vision', 'PyTorch', 'Scikit-learn', 'Python'],
   },
   {
-    title: 'Real-time Data Processing',
-    description: 'Streaming data pipeline processing millions of events per day with Apache Kafka and Apache Spark.',
-    tags: ['Kafka', 'Spark', 'Scala', 'AWS'],
-    github: 'https://github.com',
-  },
-  {
-    title: 'Recommendation System',
-    description: 'Collaborative filtering system using matrix factorization techniques serving personalized recommendations at scale.',
-    tags: ['Collaborative Filtering', 'Python', 'Redis', 'PostgreSQL'],
-    github: 'https://github.com',
-  },
-  {
-    title: 'Time Series Forecasting',
-    description: 'ARIMA and LSTM-based forecasting models for stock market prediction with backtesting framework.',
-    tags: ['Time Series', 'LSTM', 'Statsmodels', 'Plotly'],
-    github: 'https://github.com',
+    title: 'MLOps Pipeline for Model Deployment',
+    description: 'End-to-end ML pipelines for model deployment and monitoring. Automated workflows including inference, threshold-based routing, fallback models, and retraining pipelines.',
+    tags: ['MLOps', 'FastAPI', 'Docker', 'Python', 'Automation'],
   },
 ]
 
@@ -63,11 +47,11 @@ export function Projects() {
             Featured Projects
           </h2>
           <p className="text-white/60 text-lg">
-            A selection of my recent work in machine learning and AI
+            Real-world AI solutions built end-to-end
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}

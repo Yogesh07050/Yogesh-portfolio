@@ -48,23 +48,38 @@ export function Hero() {
         animate={inView ? 'visible' : 'hidden'}
         className="max-w-4xl text-center z-10"
       >
+        <motion.p
+          variants={itemVariants}
+          className="text-blue-400 font-semibold text-lg mb-4 tracking-widest uppercase"
+        >
+          Hello, I&apos;m
+        </motion.p>
+
         <motion.h1
           variants={itemVariants}
-          className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent"
+          className="text-6xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent"
         >
-          AI/ML Engineer
+          Yogesh M
         </motion.h1>
+
+        <motion.h2
+          variants={itemVariants}
+          className="text-2xl md:text-3xl font-semibold text-white/80 mb-6"
+        >
+          AI/ML Developer
+        </motion.h2>
 
         <motion.p
           variants={itemVariants}
-          className="text-xl md:text-2xl text-white/70 mb-8 leading-relaxed"
+          className="text-xl md:text-xl text-white/60 mb-8 leading-relaxed max-w-2xl mx-auto"
         >
-          Building intelligent systems and data-driven solutions. Specializing in machine learning, deep learning, and MLOps.
+          Building intelligent systems and data-driven solutions. Specializing in RAG pipelines,
+          NL-to-SQL, model deployment, and MLOps — turning complex data into real-world impact.
         </motion.p>
 
         <motion.div
           variants={itemVariants}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
         >
           <motion.a
             href="#projects"
@@ -86,19 +101,19 @@ export function Hero() {
 
         <motion.div
           variants={itemVariants}
-          className="mt-16 grid grid-cols-3 gap-8 pt-12 border-t border-white/10"
+          className="grid grid-cols-3 gap-8 pt-12 border-t border-white/10"
         >
           <div className="text-center">
-            <div className="text-3xl font-bold text-blue-400">5+</div>
-            <div className="text-white/60 mt-2">Years Experience</div>
+            <div className="text-3xl font-bold text-blue-400">1+</div>
+            <div className="text-white/60 mt-2 text-sm">Year Experience</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-indigo-400">20+</div>
-            <div className="text-white/60 mt-2">Projects Completed</div>
+            <div className="text-3xl font-bold text-indigo-400">4+</div>
+            <div className="text-white/60 mt-2 text-sm">Projects Shipped</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-purple-400">15+</div>
-            <div className="text-white/60 mt-2">Technologies</div>
+            <div className="text-3xl font-bold text-purple-400">10+</div>
+            <div className="text-white/60 mt-2 text-sm">Technologies</div>
           </div>
         </motion.div>
       </motion.div>
